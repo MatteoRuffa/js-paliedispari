@@ -50,10 +50,16 @@ Dichiariamo chi ha vinto.
 */
 
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-const userChoise = prompt('scegli pari o dispari!');
-console.log(userChoise);
-const userNumber = parseInt(prompt('scegli un numero tra 1 e 5!'))
-console.log(userNumber);
+let userChoise;
+
+do {
+    userChoise = prompt('Inserisci "pari" o "dispari"');
+} while (userChoise !== 'pari' && userChoise !== 'dispari');
+
+console.log(`Hai scelto: ${userChoise}`);
+
+let userNumber = parseInt(prompt('scegli un numero tra 1 e 5!'))
+console.log(`Hai scelto: ${userNumber}`);
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 const compNumber = getRndInteger(1, 5);

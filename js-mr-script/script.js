@@ -20,7 +20,7 @@ function wordAnalysis() {
     // fare un ciclo per analizzare le lettere e vedere se sono uguali alla rispettiva posizione
     let n = 0; 
     while (n < letter.length / 2) {
-        if (letter[n] !== letters[letters.length - (n + 1)]) {
+        if (letter[n] !== letter[letter.length - (n + 1)]) {
         return result = false;
         }
         n++;

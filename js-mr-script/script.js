@@ -12,8 +12,24 @@ console.log(word);
 // let lettere = parola.split('');
 // console.log(lettere);
 
+let result = false;
 /* creo una funzione che riconosce le lettere in una parola e 
 analizza se sono posizionate nel modo giusto per formare una parola palindroma */
-function analisiParola() {
-    
+function wordAnalysis() {
+    let letter = word.split('');
+    // fare un ciclo per analizzare le lettere e vedere se sono uguali alla rispettiva posizione
+    let n = 0; 
+    while (n < letter.length / 2) {
+        if (letter[n] !== letters[letters.length - (n + 1)]) {
+        return result = false;
+        }
+        n++;
+    }
+    return result = true;
 }
+
+result = wordAnalysis()
+console.log(wordAnalysis());
+
+
+  

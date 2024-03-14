@@ -31,5 +31,12 @@ function wordAnalysis() {
 result = wordAnalysis()
 console.log(wordAnalysis());
 
+// aggiungiamo messaggio stampa 
+if (result) {
+    console.log("La parola è un palindromo");
+} else {
+    console.log("La parola non è un palindromo");
+}
+
 
   

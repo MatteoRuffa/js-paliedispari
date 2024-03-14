@@ -55,7 +55,6 @@ let userChoise;
 do {
     userChoise = prompt('Inserisci "pari" o "dispari"');
 } while (userChoise !== 'pari' && userChoise !== 'dispari');
-
 console.log(`Hai scelto: ${userChoise}`);
 
 let userNumber = parseInt(prompt('scegli un numero tra 1 e 5!'))
@@ -66,5 +65,24 @@ const compNumber = getRndInteger(1, 5);
 console.log(`il computer sceglie: ${compNumber}`);
 
 // Sommiamo i due numeri
-let result = userNumber + compNumber;
-console.log(`la somma dei due numeri è: ${result} `);
+let sum = userNumber + compNumber;
+console.log(`la somma dei due numeri è: ${sum} `);
+
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione[GENERICA])
+function paliDispari(n) {     // creo una funz.generica che se inserisco un numero mi dice se e pari o dispari
+    if (n % 2 === 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(paliDispari(sum));
+
+if (userChoise === 'pari' && paliDispari(sum)) {
+    console.log(`HAI VINTO!`);
+} else if (userChoise === 'dispari' && !paliDispari(sum) ) {
+    console.log(`HAI VINTO!`);
+} else {
+    console.log(`HAI PERSO!`);
+}

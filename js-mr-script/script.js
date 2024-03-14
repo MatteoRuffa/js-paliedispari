@@ -52,9 +52,9 @@ Dichiariamo chi ha vinto.
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 let userChoise;
 
-do {
+while (userChoise !== 'pari' && userChoise !== 'dispari') {
     userChoise = prompt('Inserisci "pari" o "dispari"').toLowerCase();
-} while (userChoise !== 'pari' && userChoise !== 'dispari');
+}
 console.log(`Hai scelto: ${userChoise}`);
 
 let userNumber = parseInt(prompt('scegli un numero tra 1 e 5!'))

@@ -53,7 +53,7 @@ Dichiariamo chi ha vinto.
 let userChoise;
 
 do {
-    userChoise = prompt('Inserisci "pari" o "dispari"');
+    userChoise = prompt('Inserisci "pari" o "dispari"').toLowerCase();
 } while (userChoise !== 'pari' && userChoise !== 'dispari');
 console.log(`Hai scelto: ${userChoise}`);
 

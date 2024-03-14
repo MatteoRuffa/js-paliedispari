@@ -76,9 +76,9 @@ function paliDispari(n) {     // creo una funz.generica che se inserisco un nume
         return false;
     }
 }
-
 console.log(paliDispari(sum));
 
+// verifichiamo se il risultato e pari o dispari e diciamo se hai vinto o perso dipendendo dai casi scelti in precedenza
 if (userChoise === 'pari' && paliDispari(sum)) {
     console.log(`HAI VINTO!`);
 } else if (userChoise === 'dispari' && !paliDispari(sum) ) {
